@@ -2,10 +2,13 @@ package com.kemalkeskin.rentACar.business.abstracts;
 
 import java.util.List;
 
-import com.kemalkeskin.rentACar.entities.concretes.Brand;
+import com.kemalkeskin.rentACar.business.DTOs.responses.brand.GetAllBrandResponse;
+import com.kemalkeskin.rentACar.business.DTOs.responses.brand.GetByIdBrandResponse;
 
 public interface BrandService {
 	
-	List<Brand>getAll();
+	List<GetAllBrandResponse>getAll();
+	
+	GetByIdBrandResponse getById(int id);
 
 }

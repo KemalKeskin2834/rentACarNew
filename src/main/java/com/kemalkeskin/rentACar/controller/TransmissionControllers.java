@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kemalkeskin.rentACar.business.DTOs.responses.transmission.GetAllTransmissionResponse;
+import com.kemalkeskin.rentACar.business.DTOs.responses.transmission.GetByIdTransmissionResponse;
 import com.kemalkeskin.rentACar.business.abstracts.TransmissionService;
-import com.kemalkeskin.rentACar.entities.concretes.Transmission;
 
 import lombok.AllArgsConstructor;
 
@@ -21,7 +23,12 @@ public class TransmissionControllers {
 	private TransmissionService transmissionService;
 	
 	@GetMapping("/getall")
-	public List<Transmission>getAll(){
+	public List<GetAllTransmissionResponse>getAll(){
 		return transmissionService.getAll();
+	}
+	
+	@GetMapping("/getbyid/{id}")
+	public GetByIdTransmissionResponse getById(@PathVariable int id){
+		return transmissionService.getById(id);
 	}
 }

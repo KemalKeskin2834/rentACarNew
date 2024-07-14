@@ -1,5 +1,6 @@
 package com.kemalkeskin.rentACar.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.kemalkeskin.rentACar.core.entities.BaseEntity;
 
 import jakarta.persistence.Column;
@@ -33,6 +34,7 @@ public class Car  extends BaseEntity{
 	private int status; // 1- rent  2-Available 
 	
 	@ManyToOne
+	@JsonBackReference
 	@JoinColumn(name = "model_id")
 	private Model model;
 

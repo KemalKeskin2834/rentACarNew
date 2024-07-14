@@ -2,9 +2,12 @@ package com.kemalkeskin.rentACar.business.abstracts;
 
 import java.util.List;
 
-import com.kemalkeskin.rentACar.entities.concretes.Fuel;
+import com.kemalkeskin.rentACar.business.DTOs.responses.fuel.GetAllFuelResponse;
+import com.kemalkeskin.rentACar.business.DTOs.responses.fuel.GetByIdFuelResponse;
 
 public interface FuelService {
 
-	List<Fuel>getAll();
+	List<GetAllFuelResponse>getAll();
+	
+	GetByIdFuelResponse getById(int id);
 }

@@ -2,6 +2,7 @@ package com.kemalkeskin.rentACar.entities.concretes;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kemalkeskin.rentACar.core.entities.BaseEntity;
 
 import jakarta.persistence.Column;
@@ -25,6 +26,7 @@ public class Brand extends BaseEntity{
 	private String name;
 	
 	 @OneToMany(mappedBy = "brand")
+	@JsonManagedReference
 	 private List<Model> models;
 	
 
