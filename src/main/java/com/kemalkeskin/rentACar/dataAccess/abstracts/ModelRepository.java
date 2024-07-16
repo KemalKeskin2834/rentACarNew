@@ -7,4 +7,5 @@ import com.kemalkeskin.rentACar.entities.concretes.Model;
 @Repository
 public interface ModelRepository extends JpaRepository<Model, Integer> {
 
+	boolean existsByName(String name);
 }

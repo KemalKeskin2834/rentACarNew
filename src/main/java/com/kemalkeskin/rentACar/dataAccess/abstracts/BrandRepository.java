@@ -7,4 +7,5 @@ import com.kemalkeskin.rentACar.entities.concretes.Brand;
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Integer> {
 
+	boolean existsByName(String name);
 }

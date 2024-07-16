@@ -8,16 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 @Table(name = "cars")
 public class Car  extends BaseEntity{
 	
@@ -33,9 +25,67 @@ public class Car  extends BaseEntity{
 	@Column(name = "status")
 	private int status; // 1- rent  2-Available 
 	
+	
+	
 	@ManyToOne
 	@JsonBackReference
 	@JoinColumn(name = "model_id")
 	private Model model;
+
+	public Car(int modelYear, String plate, double dailyPrice, int status, Model model) {
+		super();
+		this.modelYear = modelYear;
+		this.plate = plate;
+		this.dailyPrice = dailyPrice;
+		this.status = status;
+		this.model = model;
+	}
+
+	public int getModelYear() {
+		return modelYear;
+	}
+
+	public void setModelYear(int modelYear) {
+		this.modelYear = modelYear;
+	}
+
+	public String getPlate() {
+		return plate;
+	}
+
+	public void setPlate(String plate) {
+		this.plate = plate;
+	}
+
+	public double getDailyPrice() {
+		return dailyPrice;
+	}
+
+	public void setDailyPrice(double dailyPrice) {
+		this.dailyPrice = dailyPrice;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(Model model) {
+		this.model = model;
+	}
+
+
+	
+	
+	
+	
+	
 
 }
