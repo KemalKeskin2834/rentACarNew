@@ -20,7 +20,8 @@ public class GetByIdCarResponse {
 	private double dailyPrice;
 	
 
-	private int status; 
+	private String statusDescription; 
+	 
 	
 
 	private String modelName;

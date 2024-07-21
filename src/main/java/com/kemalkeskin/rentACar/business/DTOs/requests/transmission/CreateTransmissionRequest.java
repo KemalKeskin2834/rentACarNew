@@ -1,6 +1,5 @@
 package com.kemalkeskin.rentACar.business.DTOs.requests.transmission;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -12,8 +11,8 @@ import lombok.NoArgsConstructor;
 public class CreateTransmissionRequest {
 
 	@NotNull
-	@NotBlank
-	@Size(min = 3,message = "Brand name must be at least 3 characters long")
+	
+	@Size(min = 1,message = "Brand name must be at least 3 characters long")
 	private String name;
 
 	public String getName() {

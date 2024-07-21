@@ -20,7 +20,7 @@ public class GetAllCarResponse {
 	private double dailyPrice;
 	
 
-	private int status; 
+	private String statusDescription; 
 	
 
 	private String modelName;

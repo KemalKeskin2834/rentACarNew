@@ -13,7 +13,7 @@ public class CreateBrandRequest {
 
 	@NotNull
 	@NotBlank
-	@Size(min = 3,message = "Brand name must be at least 3 characters long")
+	@Size(min = 1,message = "Brand name must be at least 3 characters long")
 	private String name;
 
 	public String getName() {

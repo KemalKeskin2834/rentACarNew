@@ -13,19 +13,17 @@ public class CreateModelRequest {
 
 	@NotNull
 	@NotBlank
-	@Size(min = 3,message = "Brand name must be at least 3 characters long")
+	@Size(min = 1,message = "Brand name must be at least 1 characters long")
 	private String name;
 	
 	@NotNull
-	@NotBlank
 	private int BrandId;
+			
 	
 	@NotNull
-	@NotBlank
 	private int FuelId;
 	
 	@NotNull
-	@NotBlank
 	private int TransmissionId;
 
 	
@@ -38,13 +36,7 @@ public class CreateModelRequest {
 		this.name = name;
 	}
 
-	public int getBrandId() {
-		return BrandId;
-	}
 
-	public void setBrandId(int brandId) {
-		BrandId = brandId;
-	}
 
 	public int getFuelId() {
 		return FuelId;
@@ -61,6 +53,20 @@ public class CreateModelRequest {
 	public void setTransmissionId(int transmissionId) {
 		TransmissionId = transmissionId;
 	}
+
+	public int getBrandId() {
+		return BrandId;
+	}
+
+	public void setBrandId(int brandId) {
+		BrandId = brandId;
+	}
+
+
+
+
+
+
 	
 	
 }
