@@ -16,6 +16,7 @@ import com.kemalkeskin.rentACar.core.exception.ProblemDetails;
 
 @SpringBootApplication
 @RestControllerAdvice
+
 public class RentACarApplication {
 
 	public static void main(String[] args) {

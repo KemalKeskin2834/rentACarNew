@@ -10,6 +10,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class GetByIdCarResponse {
+	
+	private int id;
 
 	private int modelYear;
 	

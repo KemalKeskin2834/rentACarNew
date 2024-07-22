@@ -28,12 +28,12 @@ public class CarControllers {
 	@Autowired
 	private CarService carService;
 	
-	@GetMapping("/getall")
-	public List<GetAllCarResponse>getAll(){
+	 @GetMapping("/getall")
+	public List<GetAllCarResponse> getAll(){
 		return carService.getAll();
 	}
 	
-	@GetMapping("/getbyid/{id}")
+	 @GetMapping("/getbyid/{id}")
 	public GetByIdCarResponse getById(@PathVariable int id){
 		return carService.getById(id);
 	}
@@ -51,6 +51,6 @@ public class CarControllers {
 	@DeleteMapping("/delete/{id}")
 	public void delete(@PathVariable int id) {
 		this.carService.delete(id);
-	}
+	} 
 
 }
